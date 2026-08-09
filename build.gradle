@@ -28,12 +28,9 @@ dependencies {
         exclude group: 'com.nukkitx', module: 'natives'
     }
 
-    embed 'com.google.code.gson:gson:2.10.1'
-    embed('com.github.coelho:minecraft-msftauth:2.1.6')
-        exclude group: 'com.squareup.okhttp3'
+    embed('com.github.coelho:minecraft-msftauth:2.1.6') {
+    exclude group: 'com.squareup.okhttp3'
     }
-    embed 'org.iq80.leveldb:leveldb:0.12'
-    embed('com.squareup.okhttp3:okhttp:4.11.0') {
         exclude group: 'org.jetbrains.kotlin'
     }
 }
