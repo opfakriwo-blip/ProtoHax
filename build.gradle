@@ -1,18 +1,16 @@
+plugins {
+    id 'java'
+    id 'kotlin'
+    id 'com.github.johnrengelman.shadow' version '7.1.2' // Update the version as needed
+    id 'maven-publish' // If you intend to publish
+}
+
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
     maven { url 'https://repo.opencollab.dev/maven-releases/' }
     maven { url 'https://repo.opencollab.dev/maven-snapshots/' }
     maven { url 'https://mccheatz.github.io/maven_repo/' }
-}
-    maven { url 'https://repo.opencollab.dev/maven-releases/' }
-    maven { url 'https://repo.opencollab.dev/maven-snapshots/' }
-    maven { url 'https://mccheatz.github.io/maven_repo/' }
-}
-
-
-    maven { url = 'https://repo.opencollab.dev/maven-snapshots/' }
-    maven { url = 'https://mccheatz.github.io/maven_repo/' }
 }
 
 configurations {
@@ -21,7 +19,7 @@ configurations {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2"
 
     embed('org.cloudburstmc.protocol:bedrock-connection:3.0.0.Beta1-SNAPSHOT') {
         exclude group: 'com.nukkitx', module: 'natives'
@@ -44,7 +42,7 @@ kotlin {
 shadowJar {
     archiveClassifier.set('')
     configurations = [project.configurations.embed]
-    duplicatesStrategy DuplicatesStrategy.EXCLUDE
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 publishing {
