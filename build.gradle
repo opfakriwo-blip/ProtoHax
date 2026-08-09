@@ -8,7 +8,6 @@ group = 'dev.sora.relay'
 version = '1.4.0'
 
 repositories {
-        maven { url "https://jitpack.io" }
     mavenLocal()
     mavenCentral()
     maven { url = 'https://repo.opencollab.dev/maven-releases/' }
@@ -28,15 +27,18 @@ dependencies {
         exclude group: 'com.nukkitx', module: 'natives'
     }
 
-    embed('com.github.coelho:minecraft-msftauth:2.1.6') {
-    exclude group: 'com.squareup.okhttp3'
+    embed 'com.google.code.gson:gson:2.10.1'
+    embed('coelho.msftauth:minecraft-msftauth:2.1.6') {
+        exclude group: 'com.squareup.okhttp3'
     }
+    embed 'io.github._0x9fff00.leveldb:leveldb:0.10.2'
+    embed('com.squareup.okhttp3:okhttp:4.11.0') {
         exclude group: 'org.jetbrains.kotlin'
     }
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(11)
 }
 
 shadowJar {
