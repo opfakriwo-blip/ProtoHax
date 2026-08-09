@@ -1,16 +1,12 @@
-plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
-    id 'com.github.johnrengelman.shadow' version '8.0.0'
-    id 'maven-publish'
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.opencollab.dev/maven-releases/' }
+    maven { url 'https://repo.opencollab.dev/maven-snapshots/' }
+    maven { url 'https://mccheatz.github.io/maven_repo/' }
 }
 
-group = 'dev.sora.relay'
-version = '1.4.0'
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url = 'https://repo.opencollab.dev/maven-releases/' }
     maven { url = 'https://repo.opencollab.dev/maven-snapshots/' }
     maven { url = 'https://mccheatz.github.io/maven_repo/' }
 }
