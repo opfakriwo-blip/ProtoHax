@@ -5,6 +5,10 @@ repositories {
     maven { url 'https://repo.opencollab.dev/maven-snapshots/' }
     maven { url 'https://mccheatz.github.io/maven_repo/' }
 }
+    maven { url 'https://repo.opencollab.dev/maven-releases/' }
+    maven { url 'https://repo.opencollab.dev/maven-snapshots/' }
+    maven { url 'https://mccheatz.github.io/maven_repo/' }
+}
 
 
     maven { url = 'https://repo.opencollab.dev/maven-snapshots/' }
