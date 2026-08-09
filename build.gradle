@@ -28,7 +28,7 @@ dependencies {
     }
 
     embed 'com.google.code.gson:gson:2.10.1'
-    embed('coelho.msftauth:minecraft-msftauth:2.1.6') {
+    embed('com.github.coelho:minecraft-msftauth:2.1.6') {
         exclude group: 'com.squareup.okhttp3'
     }
     embed 'io.github._0x9fff00.leveldb:leveldb:0.10.2'
